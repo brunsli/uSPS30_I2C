@@ -193,5 +193,4 @@ Partial command references adapted from [@dvsu's sps30.py](https://github.com/dv
 ## 📎 Comments and TODO's
 
 - Add support for passive read mode (not just continuous), this seems to implemented in newer versions/firmware of the SPS30. Might be good for energy sensitive implementations.
-- Implement `read_serial_number()` and `read_product_type()`
 - The driver is not async-friendly.
