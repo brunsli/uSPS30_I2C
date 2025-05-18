@@ -7,7 +7,7 @@ This driver provides an object-oriented interface to initialize the sensor, star
 A manual for the SPS30 can be found on Sensirion's website: [Dataasheet SPS30](https://sensirion.com/media/documents/8600FF88/64A3B8D6/Sensirion_PM_Sensors_Datasheet_SPS30.pdf)
 
 
-## 📦 Features
+## Features
 
 - Supports **IEEE754 float** and **16-bit unsigned integer** measurement modes
 - Handles **CRC8 integrity checks** on sensor data
@@ -18,20 +18,20 @@ A manual for the SPS30 can be found on Sensirion's website: [Dataasheet SPS30](h
 - Access to:
   - Sensor status register
   - Auto-cleaning interval
-  - Firmware version
+  - Firmware version, serial number, product type
 - Implements:
   - Manual fan cleaning trigger
   - Sleep and wake control
 
 
-## 🛠️ Requirements
+## Requirements
 
 - MicroPython-compatible board (e.g. Raspberry Pi Pico, ESP32)
 - `machine.I2C` or `SoftI2C` object
 - Sensirion SPS30 sensor module (I2C variant)
 
 
-## 🧰 Class Overview
+## Class Overview
 
 ### `SPS30_I2C(i2c, datatype="UI16")`
 
@@ -47,7 +47,7 @@ Creates a new SPS30 driver instance.
 - `dict_fimware_verion`: Major and minor firmware verision.
 
 
-## 🔧 Example Usage
+## Example Usage
 
 ```python
 '''
@@ -134,7 +134,7 @@ SPS30 sending self cleaning command
 Setting SPS30 into sleep mode.
 ```
 
-## 📋 Available Methods
+## Available Methods
 
 | Method                         | Description                                                  |
 |--------------------------------|--------------------------------------------------------------|
@@ -152,7 +152,7 @@ Setting SPS30 into sleep mode.
 | `sleep()` / `wakeup()`        | Put the sensor to sleep or resume operation                  |
 
 
-## 📖 Supported Measurements
+## Supported Measurements
 
 The sensor returns the following values in order:
 
@@ -183,14 +183,14 @@ dict_values = {"mc_pm1.0"  : None,
 ```
 
 
-## 📝 License
+## License
 
 MIT License. Based on hardware protocols by Sensirion.  
 Partial command references adapted from [@dvsu's sps30.py](https://github.com/dvsu/sps30).
 
 
 
-## 📎 Comments and TODO's
+## Comments and TODO's
 
 - Add support for passive read mode (not just continuous), this seems to implemented in newer versions/firmware of the SPS30. Might be good for energy sensitive implementations.
 - The driver is not async-friendly.
