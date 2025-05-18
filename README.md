@@ -170,16 +170,16 @@ The sensor returns the following values in order:
 ### Measurement values are returned as a dict:
 
 ```python
-dict_values = {"mc_pm1.0"  : None,
-                    "mc_pm2.5"  : None,
-                    "mc_pm4.0"  : None,
-                    "mc_pm10.0" : None,
-                    "pc_pm0.5"  : None,
-                    "pc_pm1.0"  : None,
-                    "pc_pm2.5"  : None,
-                    "pc_pm4.0"  : None,
-                    "pc_pm10.0" : None,
-                    "typical_size": None}
+dict_values = { "mc_pm1.0"  :   None,
+                "mc_pm2.5"  :   None,
+                "mc_pm4.0"  :   None,
+                "mc_pm10.0" :   None,
+                "pc_pm0.5"  :   None,
+                "pc_pm1.0"  :   None,
+                "pc_pm2.5"  :   None,
+                "pc_pm4.0"  :   None,
+                "pc_pm10.0" :   None,
+                "typical_size": None}
 ```
 
 
