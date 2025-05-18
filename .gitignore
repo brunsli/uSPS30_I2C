@@ -1,0 +1,33 @@
+# Python / MicroPython
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+.picowgo
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
+
+# Firmware tools / build outputs
+*.uf2
+*.hex
+*.bin
+*.elf
+build/
+dist/
+.micropython/
+.mpy-cross/
+
+# Environment / test configs
+.env
+*.json
